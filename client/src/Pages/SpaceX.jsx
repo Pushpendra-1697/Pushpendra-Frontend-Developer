@@ -103,17 +103,6 @@ const SpaceX = () => {
                     </Box>
                 </Box>
 
-                {/* Pagination */}
-                <Box>
-                    <Button onClick={() => setPage(page - 1)} isDisabled={page <= 1}>
-                        Prev
-                    </Button>
-                    <Button variant={'outline'} color={'white'} isDisabled>{page}</Button>
-                    <Button ml="5px" onClick={() => setPage(page + 1)} isDisabled={page === totalPages}>
-                        Next
-                    </Button>
-                </Box>
-
                 <Box
                     display={"grid"}
                     gridTemplateColumns={[
@@ -174,6 +163,17 @@ const SpaceX = () => {
                                 </Box>
                             );
                         })}
+                </Box>
+
+                {/* Pagination */}
+                <Box display={'flex'} justifyContent={'center'} alignItems={'center'} gap={'5px'}>
+                    <Button onClick={() => setPage(page - 1)} isDisabled={page <= 1}>
+                        Prev
+                    </Button>
+                    <Button variant={'outline'} color={'white'} isDisabled>{page}</Button>
+                    <Button ml="5px" onClick={() => setPage(page + 1)} isDisabled={page === totalPages}>
+                        Next
+                    </Button>
                 </Box>
             </Box>
         </Box>
