@@ -69,12 +69,12 @@ const SpaceX = () => {
                         <BiLoaderCircle fontSize={"34px"} />{" "}
                     </Box>
                 )}
-                {error && <Box display={"flex"} justifyContent="center" alignItems={"center"}>
+                {/* {error && <Box display={"flex"} justifyContent="center" alignItems={"center"}>
                     <Alert status='error' w="300px" >
                         <AlertIcon />
                         {`Something went Wrong 😒`}
                     </Alert>
-                </Box>}
+                </Box>} */}
 
                 {/* Filter */}
                 <Box
