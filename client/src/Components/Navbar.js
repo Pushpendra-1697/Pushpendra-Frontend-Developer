@@ -1,10 +1,12 @@
-import { Avatar, Box, Button, Center, Flex, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Stack, useColorMode, useColorModeValue, Image, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Avatar, Box, Button, Center, Flex, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Stack, useColorMode, useColorModeValue, Image, Text, Input } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import '../Styles/Comman.css';
 import { ReactNode } from 'react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import './navbar.css';
+import { useDispatch } from 'react-redux';
+import { serachCapsules } from '../redux/Action';
 
 
 const NavLink = ({ children }: { children: ReactNode }) => (
@@ -25,6 +27,8 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const navigate = useNavigate();
+    const [search, setSearch] = useState('');
+    const dispatch = useDispatch();
 
     const handleLogout = () => {
         localStorage.removeItem('name');
@@ -32,6 +36,12 @@ const Navbar = () => {
         navigate('/');
     };
 
+    const handleSearch = () => {
+        if (!search) {
+            return;
+        }
+        dispatch(serachCapsules(search));
+    };
 
     return (
         <Box mb={["35%", "35%", "10%"]}>
@@ -42,6 +52,16 @@ const Navbar = () => {
                     <Text display={["none", "none", "block"]}><Link className='icon' to="/">Home</Link></Text>
                     <Text><Link className='icon' to="/spacex">SpaceX</Link></Text>
 
+                    <Box display={["none", "none", "flex"]}>
+                        <Input
+                            placeholder="Enter Original Launch"
+                            onChange={(e) => setSearch(e.target.value)}
+                            fontSize={"20px"}
+                        />
+                        <Button ml="3px" onClick={handleSearch}>
+                            Search
+                        </Button>
+                    </Box>
 
                     <Flex alignItems={'center'}>
                         <Stack direction={'row'} spacing={7}>

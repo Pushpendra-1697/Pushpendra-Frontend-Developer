@@ -5,6 +5,7 @@ const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fet
 
 spaceRouter.get('/capsules', async (req, res) => {
     let { page, search, status, type } = req.query;
+    
     let response;
     try {
         if (search) {
