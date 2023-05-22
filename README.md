@@ -11,7 +11,7 @@ https://spacex-avir.onrender.com/
 # A) Frontend :
 React (JSX Syntax), Redux, Chakra-ui Library for Styling & Modal, axios for handling asynchrous request, react-router-dom for routing or Navigate from one page to another, Standard react components, React-hooks, chakra-icons & react-icons.
 # B) Backend :
-Node.js, Express.js, mongodb (NoSQL), mongoose for connect database to server, cors for handling the cors error, relationships between collections, jsonwebtoken, node-fetch, BSON and Bsondump.
+Node.js, Express.js, mongodb (NoSQL), mongoose for connect database to server, cors for handling the cors error, relationships between collections, jsonwebtoken, node-fetch, BSON and Bsondump and Mocha, Chai used for testing REST APIs in Node.JS.
 
 ## Installation
 
@@ -31,8 +31,17 @@ PORT ---> 3000 || 8080
 
 # Some HTTP (Hyper Text Transfer Protocol) Status Code Which I used :
 404 ---> Not Found/failure
-
+201 ---> Created/post
 200 --->  OK/Success/get/put
+
+
+# API Testing by Mocha, Chai JavaScript testing framework:
+```bash
+    To Run Test-Cases use
+    npm test
+    (or) 
+    npm run test
+```
 
 # Some Project Screenshots :
 # A) For Computer Screen:
