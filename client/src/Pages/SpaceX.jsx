@@ -46,9 +46,6 @@ const SpaceX = () => {
     };
     return (
         <Box
-            bgImage={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWGIMPT3zXhJuooNt_pSOKaFhFcMZxI8nCzQ&usqp=CAU"
-            }
             backgroundRepeat="no-repeat"
             backgroundSize=" cover"
         >
