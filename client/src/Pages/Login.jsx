@@ -84,7 +84,7 @@ const Login = () => {
   const { name, password } = formData;
 
   return (
-    <Box style={{ textAlign: 'center' }}>
+    <Box style={{ textAlign: 'center' }} mt='10%'>
       <Heading mb="10px" style={{ textAlign: "center" }} fontSize={["22px", '22px', '26px']}>Sign in to your account</Heading>
       <Text mb={["20px", '20px', '15px']}>to enjoy all of our cool features ✌️</Text>
       <form onSubmit={onSubmit} style={{ textAlign: "center" }}>

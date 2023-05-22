@@ -72,7 +72,7 @@ const Signup = () => {
 
   const { name, password } = formData;
   return (
-    <Box textAlign={'center'}>
+    <Box textAlign={'center'} mt='10%'>
       <Heading mb="10px" fontSize={["22px", '22px', '26px']}>Sign up</Heading>
       <Text mb={["20px", '20px', '15px']}>to enjoy all of our cool features ✌️</Text>
       <Container>
