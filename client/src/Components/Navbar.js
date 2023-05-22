@@ -44,7 +44,7 @@ const Navbar = () => {
     };
 
     return (
-        <Box mb={["35%", "35%", "10%"]}>
+        <Box mb={["15%", "15%", "4%"]}>
             <Box bg={useColorModeValue('goldenrod', 'gray.900')} px={4} position={"fixed"} top={"0.1px"} w="100%" zIndex={"100"}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <Link to="/"> <Image className='icon' w={"10px"} src="./logo.png" alt='logo' /> </Link>

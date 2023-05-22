@@ -48,6 +48,8 @@ const SpaceX = () => {
         <Box
             backgroundRepeat="no-repeat"
             backgroundSize=" cover"
+            bg={"goldenrod"}
+            padding={"13px 0"}
         >
             <Box>
                 <Heading
@@ -66,12 +68,6 @@ const SpaceX = () => {
                         <BiLoaderCircle fontSize={"34px"} />{" "}
                     </Box>
                 )}
-                {/* {error && <Box display={"flex"} justifyContent="center" alignItems={"center"}>
-                    <Alert status='error' w="300px" >
-                        <AlertIcon />
-                        {`Something went Wrong 😒`}
-                    </Alert>
-                </Box>} */}
 
                 {/* Filter */}
                 <Box
@@ -79,7 +75,7 @@ const SpaceX = () => {
                     flexWrap={"wrap"}
                     justifyContent={"space-around"}
                     m="20px auto"
-                    color={'green.400'}
+                    color={'white'}
                 >
                     <Box>
                         <Select onChange={handleStatus}>
@@ -167,7 +163,7 @@ const SpaceX = () => {
                     <Button onClick={() => setPage(page - 1)} isDisabled={page <= 1}>
                         Prev
                     </Button>
-                    <Button variant={'outline'} color={'white'} isDisabled>{page}</Button>
+                    <Button variant={'outline'} color={'red'} isDisabled>{page}</Button>
                     <Button ml="5px" onClick={() => setPage(page + 1)} isDisabled={page === totalPages}>
                         Next
                     </Button>
